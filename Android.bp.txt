@@ -1,0 +1,9 @@
+bp
+  cc_binary {
+      name: "set-hdmi-config",
+      srcs: ["set-hdmi-config.cpp"],
+      shared_libs: ["libbinder","libgui","libui","libutils","liblog","libandroid"],
+      vendor: true, proprietary: true,
+      cflags: ["-Wall","-Werror","-Wno-unused-parameter"],
+      header_libs: ["libgui_headers"],
+  }
